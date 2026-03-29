@@ -55,7 +55,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-background/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p className="text-xs text-background/40">© 2026 PRANAG-AI. All rights reserved.</p>
+        <p className="text-xs text-background/40">&copy; 2026 Make By Kartik Copyright</p>
         <p className="text-xs italic text-background/40">"Empowering Precision Livestock Intelligence"</p>
       </div>
     </div>
