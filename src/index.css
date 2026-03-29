@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 95%;
+    --foreground: 0 0% 17%;
+
+    --card: 40 30% 97%;
+    --card-foreground: 0 0% 17%;
+
+    --popover: 40 30% 97%;
+    --popover-foreground: 0 0% 17%;
+
+    --primary: 122 46% 33%;
+    --primary-foreground: 40 33% 95%;
+
+    --secondary: 43 72% 49%;
+    --secondary-foreground: 0 0% 17%;
+
+    --muted: 40 20% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 122 35% 74%;
+    --accent-foreground: 0 0% 17%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
+    --ring: 122 46% 33%;
+
+    --radius: 0.75rem;
+
+    --sage: 122 35% 74%;
+    --gold-start: 43 72% 46%;
+    --gold-end: 45 78% 52%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-start)), hsl(var(--gold-end)));
+  }
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(122 46% 40%));
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-start)), hsl(var(--gold-end)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .glass {
+    backdrop-filter: blur(12px);
+    background: hsla(40, 33%, 95%, 0.8);
+    border: 1px solid hsla(40, 20%, 85%, 0.5);
+  }
+}
+
+@keyframes scan-line {
+  0% { top: 0; }
+  50% { top: calc(100% - 4px); }
+  100% { top: 0; }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes soundwave {
+  0%, 100% { height: 8px; }
+  50% { height: 32px; }
+}
+
+@keyframes grid-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+@keyframes scroll-hint {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.5; }
+}
+
+@keyframes skeleton-mesh {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: 20; }
+}
+
+@keyframes notification-slide {
+  0% { transform: translateX(100%); opacity: 0; }
+  10% { transform: translateX(0); opacity: 1; }
+  90% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
