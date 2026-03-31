@@ -1,7 +1,6 @@
-import { ChevronDown, FileText } from "lucide-react";
+import { ChevronDown, Stethoscope } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import logoPranag from "@/assets/logopranag1.png";
-import GooglePlayButton from "@/components/GooglePlayButton";
 
 const HeroSection = () => (
   <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -18,21 +17,23 @@ const HeroSection = () => (
     />
 
     <div className="relative z-10 container text-center px-4">
-      <img src={logoPranag} alt="PRANAG" className="w-24 h-24 mx-auto mb-4 drop-shadow-2xl" />
+      <img src={logoPranag} alt="PRANA-G AI" className="w-24 h-24 mx-auto mb-4 drop-shadow-2xl" />
       <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-sage/40 bg-sage/10 text-sage text-xs font-semibold tracking-wider uppercase">
-        AI-Powered Livestock Health App
+        AI-Powered Cattle Health Monitoring
       </div>
       <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-background leading-tight mb-6">
-        Hardware-less AI for{" "}
-        <span className="text-gradient-gold">Precision Livestock Care</span>
+        Smart Monitoring for{" "}
+        <span className="text-gradient-gold">Smarter Dairy Farming</span>
       </h1>
       <p className="max-w-2xl mx-auto text-background/80 text-lg sm:text-xl mb-10 leading-relaxed">
-        Transform your smartphone into a powerful veterinary diagnostic tool. No expensive hardware needed — just point, scan, and get instant AI-driven health insights for your livestock.
+        Discover how PRANA-G AI helps farmers identify cattle, monitor health risks, maintain digital records, and take faster action — all from a smartphone app.
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <GooglePlayButton dark />
-        <a href="#about" className="bg-background/10 border border-background/30 text-background font-semibold px-8 py-3.5 rounded-xl flex items-center gap-2 hover:bg-background/20 transition-colors">
-          <FileText size={20} /> Explore Features
+        <a href="#about" className="gradient-primary text-primary-foreground font-semibold px-8 py-3.5 rounded-xl flex items-center gap-2 hover:opacity-90 transition-opacity">
+          Explore Features
+        </a>
+        <a href="#muzzle" className="bg-background/10 border border-background/30 text-background font-semibold px-8 py-3.5 rounded-xl flex items-center gap-2 hover:bg-background/20 transition-colors">
+          <Stethoscope size={20} /> Learn More
         </a>
       </div>
     </div>

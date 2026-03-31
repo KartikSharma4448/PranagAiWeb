@@ -1,11 +1,11 @@
-import { Move, Eye, AlertTriangle, Activity } from "lucide-react";
+import { Eye, Search, AlertTriangle, Activity } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const features = [
-  { icon: Move, title: "Skeletal Mesh Mapping", desc: "Real-time skeletal overlay tracks joint positions and body alignment." },
-  { icon: Eye, title: "Gait & Posture Monitoring", desc: "Continuous analysis of walking patterns detects subtle mobility changes." },
-  { icon: AlertTriangle, title: "Early Lameness Detection", desc: "Identifies lameness indicators days before visible symptoms appear." },
-  { icon: Activity, title: "Injury Risk Alerts", desc: "Predictive alerts for potential injuries based on movement anomalies." },
+  { icon: Eye, title: "Image-Based Analysis", desc: "Upload or capture cattle skin images for AI-powered visual inspection." },
+  { icon: Search, title: "Risk Indicator Detection", desc: "Identifies visible signs of skin conditions, infections, and abnormalities." },
+  { icon: AlertTriangle, title: "Early Warning Flags", desc: "Get flagged for potential issues before they become serious problems." },
+  { icon: Activity, title: "Track Over Time", desc: "Compare skin health across scans to monitor recovery or progression." },
 ];
 
 const SpatialSection = () => {
@@ -14,42 +14,46 @@ const SpatialSection = () => {
     <section id="spatial" ref={ref} className="py-20 lg:py-28 bg-card">
       <div className="container">
         <div className="text-center mb-14">
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Spatial AI</p>
+          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Visual AI</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold">
-            Mobility <span className="text-gradient-gold">Health Analysis</span>
+            Skin Health <span className="text-gradient-gold">Analysis</span>
           </h2>
+          <p className="text-muted-foreground mt-3 max-w-lg mx-auto">
+            The app analyzes cattle skin images to identify visible health risk indicators.
+          </p>
         </div>
 
         <div className={`grid lg:grid-cols-2 gap-12 items-center ${visible ? "animate-fade-in" : "opacity-0"}`}>
-          {/* Mesh animation */}
+          {/* Visual element */}
           <div className="relative mx-auto w-full max-w-sm aspect-square">
             <svg viewBox="0 0 300 300" className="w-full h-full">
-              {/* Cattle outline with animated mesh */}
-              <g stroke="hsl(var(--primary))" strokeWidth="1.5" fill="none" opacity="0.6" style={{ strokeDasharray: "8 4", animation: "skeleton-mesh 3s ease-in-out infinite" }}>
-                {/* Body outline */}
-                <ellipse cx="150" cy="150" rx="100" ry="60" />
-                {/* Head */}
-                <ellipse cx="60" cy="120" rx="30" ry="25" />
-                {/* Legs */}
-                <line x1="100" y1="210" x2="100" y2="260" />
-                <line x1="130" y1="210" x2="130" y2="265" />
-                <line x1="180" y1="210" x2="180" y2="260" />
-                <line x1="210" y1="210" x2="210" y2="265" />
+              {/* Scanning grid overlay */}
+              <g stroke="hsl(var(--primary))" strokeWidth="0.5" opacity="0.2">
+                {Array.from({ length: 10 }).map((_, i) => (
+                  <line key={`h${i}`} x1="0" y1={i * 30 + 15} x2="300" y2={i * 30 + 15} />
+                ))}
+                {Array.from({ length: 10 }).map((_, i) => (
+                  <line key={`v${i}`} x1={i * 30 + 15} y1="0" x2={i * 30 + 15} y2="300" />
+                ))}
               </g>
-              {/* Joint dots */}
-              {[[100,210],[130,210],[180,210],[210,210],[60,120],[150,150],[100,260],[130,265],[180,260],[210,265]].map(([cx,cy], i) => (
-                <circle key={i} cx={cx} cy={cy} r="4" fill="hsl(var(--gold-start))" opacity="0.8">
-                  <animate attributeName="r" values="3;5;3" dur="2s" begin={`${i * 0.2}s`} repeatCount="indefinite" />
-                </circle>
-              ))}
-              {/* Connecting mesh lines */}
-              <g stroke="hsl(var(--sage))" strokeWidth="0.5" opacity="0.3">
-                <line x1="100" y1="210" x2="150" y2="150" />
-                <line x1="130" y1="210" x2="150" y2="150" />
-                <line x1="180" y1="210" x2="150" y2="150" />
-                <line x1="210" y1="210" x2="150" y2="150" />
-                <line x1="60" y1="120" x2="150" y2="150" />
+              {/* Detection zones */}
+              <circle cx="120" cy="130" r="35" stroke="hsl(var(--primary))" strokeWidth="2" fill="hsl(var(--primary))" fillOpacity="0.1" strokeDasharray="6 3">
+                <animate attributeName="r" values="33;37;33" dur="2s" repeatCount="indefinite" />
+              </circle>
+              <circle cx="200" cy="170" r="25" stroke="hsl(var(--gold-start))" strokeWidth="2" fill="hsl(var(--gold-start))" fillOpacity="0.1" strokeDasharray="6 3">
+                <animate attributeName="r" values="23;27;23" dur="2.5s" repeatCount="indefinite" />
+              </circle>
+              <circle cx="160" cy="220" r="20" stroke="hsl(var(--sage))" strokeWidth="2" fill="hsl(var(--sage))" fillOpacity="0.1" strokeDasharray="6 3">
+                <animate attributeName="r" values="18;22;18" dur="1.8s" repeatCount="indefinite" />
+              </circle>
+              {/* Center icon */}
+              <g transform="translate(130, 130)">
+                <text fontSize="14" fill="hsl(var(--primary))" fontWeight="bold" textAnchor="middle" x="20" y="5">AI</text>
               </g>
+              {/* Labels */}
+              <text x="120" y="180" fontSize="9" fill="hsl(var(--primary))" textAnchor="middle" opacity="0.7">Zone A</text>
+              <text x="200" y="210" fontSize="9" fill="hsl(var(--gold-start))" textAnchor="middle" opacity="0.7">Zone B</text>
+              <text x="160" y="255" fontSize="9" fill="hsl(var(--sage))" textAnchor="middle" opacity="0.7">Zone C</text>
             </svg>
           </div>
 

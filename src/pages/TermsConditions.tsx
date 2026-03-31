@@ -10,7 +10,7 @@ const TermsConditions = () => (
         <Link to="/" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
           <ArrowLeft size={18} /> Back
         </Link>
-        <img src={logo} alt="PRANAG-AI" className="h-7 ml-auto" />
+        <img src={logo} alt="PRANA-G AI" className="h-7 ml-auto" />
       </div>
     </header>
 

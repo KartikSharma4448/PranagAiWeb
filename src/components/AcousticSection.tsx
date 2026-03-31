@@ -1,11 +1,11 @@
-import { Activity, Heart, Baby, Cpu } from "lucide-react";
+import { Activity, Heart, Volume2, Cpu } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const cards = [
-  { icon: Activity, title: "Respiratory Distress Detection", desc: "Identifies abnormal breathing patterns and coughing through acoustic analysis." },
-  { icon: Heart, title: "Pain Pattern Recognition", desc: "Detects vocalizations associated with pain, stress, and discomfort." },
-  { icon: Baby, title: "Estrus Cycle Prediction", desc: "Predicts estrus up to 48 hours early using vocal and behavioral acoustic cues." },
-  { icon: Cpu, title: "TinyML On-Device Processing", desc: "All acoustic analysis runs directly on your phone — no cloud required." },
+  { icon: Activity, title: "Respiratory Sound Detection", desc: "Identifies abnormal breathing patterns and coughing through audio analysis." },
+  { icon: Heart, title: "Distress Recognition", desc: "Detects vocalizations associated with pain, stress, and discomfort." },
+  { icon: Volume2, title: "Health Signal Screening", desc: "Audio-based analysis helps detect additional health-related signals from cattle sounds." },
+  { icon: Cpu, title: "On-Device Processing", desc: "All acoustic analysis runs directly on your phone — no cloud upload required." },
 ];
 
 const AcousticSection = () => {
@@ -16,11 +16,13 @@ const AcousticSection = () => {
         <div className="text-center mb-14">
           <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Acoustic AI</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold">
-            Sound-Based <span className="text-gradient-gold">Health Detection</span>
+            Sound-Based <span className="text-gradient-gold">Health Screening</span>
           </h2>
+          <p className="text-muted-foreground mt-3 max-w-lg mx-auto">
+            Audio-based analysis helps detect additional health-related signals from cattle sounds.
+          </p>
         </div>
 
-        {/* Soundwave */}
         <div className={`flex items-end justify-center gap-1 mb-14 h-10 ${visible ? "animate-fade-in" : "opacity-0"}`}>
           {Array.from({ length: 40 }).map((_, i) => (
             <div

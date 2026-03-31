@@ -2,9 +2,9 @@ import { Bell, AlertTriangle, Heart, Thermometer, ShieldCheck } from "lucide-rea
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const notifications = [
-  { icon: AlertTriangle, color: "bg-destructive/10 text-destructive", title: "Emergency Alert", desc: "Animal MH-2847 showing signs of acute respiratory distress.", time: "Just now" },
+  { icon: AlertTriangle, color: "bg-destructive/10 text-destructive", title: "Health Risk Alert", desc: "Animal MH-2847 showing signs of skin abnormality — review recommended.", time: "Just now" },
   { icon: Thermometer, color: "bg-secondary/20 text-secondary", title: "Temperature Warning", desc: "Body temperature elevated to 39.8°C — monitor closely.", time: "5 min ago" },
-  { icon: Heart, color: "bg-primary/10 text-primary", title: "Health Update", desc: "Weekly health score improved to 94%. All vitals stable.", time: "1 hour ago" },
+  { icon: Heart, color: "bg-primary/10 text-primary", title: "Health Update", desc: "Weekly health score improved to 94%. All indicators stable.", time: "1 hour ago" },
   { icon: ShieldCheck, color: "bg-accent/30 text-primary", title: "Preventive Care", desc: "Vaccination due in 7 days. Schedule appointment now.", time: "2 hours ago" },
 ];
 
@@ -14,12 +14,12 @@ const NotificationsSection = () => {
     <section id="notifications" ref={ref} className="py-20 lg:py-28 bg-card">
       <div className="container">
         <div className="text-center mb-14">
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Early Warning System</p>
+          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Risk Alerts</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold">
-            Predictive <span className="text-gradient-gold">Alerts</span>
+            Health Reports & <span className="text-gradient-gold">Risk Alerts</span>
           </h2>
           <p className="text-muted-foreground mt-3 max-w-lg mx-auto">
-            Real-time health notifications, emergency warnings, and preventive care suggestions delivered instantly.
+            Real-time health notifications, risk warnings, and recommendations delivered instantly for timely action.
           </p>
         </div>
 
@@ -46,7 +46,7 @@ const NotificationsSection = () => {
 
         <div className="flex justify-center mt-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-            <Bell size={16} /> Real-time notifications enabled
+            <Bell size={16} /> Real-time alerts enabled
           </div>
         </div>
       </div>

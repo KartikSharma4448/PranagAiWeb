@@ -1,11 +1,11 @@
-import { Lock, Shield, Fingerprint, Server, ShieldCheck } from "lucide-react";
+import { Lock, Shield, CloudUpload, Server, ShieldCheck } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const items = [
-  { icon: Lock, title: "Biometric Data Encryption", desc: "All muzzle-print and identity data is encrypted using AES-256 standards." },
-  { icon: Shield, title: "Secure Animal Identity", desc: "Tamper-proof digital identity records protected by cryptographic verification." },
-  { icon: Server, title: "Local Device Processing", desc: "Data stays on your device — no cloud uploads, no third-party access." },
-  { icon: Fingerprint, title: "Fraud-Proof Authentication", desc: "Biometric verification prevents identity fraud and unauthorized access." },
+  { icon: CloudUpload, title: "Secure Cloud Sync", desc: "User data, profiles, and health records can be synced securely for continuity across sessions." },
+  { icon: Lock, title: "Data Encryption", desc: "All health data and identity records are encrypted using industry-standard protocols." },
+  { icon: Shield, title: "Secure Animal Identity", desc: "Tamper-proof digital identity records protected by biometric verification." },
+  { icon: Server, title: "On-Device Processing", desc: "Sensitive data stays on your device — processed locally without unnecessary uploads." },
   { icon: ShieldCheck, title: "End-to-End Protection", desc: "Complete data protection from capture to storage with zero data leakage." },
 ];
 
@@ -17,7 +17,7 @@ const PrivacySection = () => {
         <div className="text-center mb-14">
           <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Trust & Security</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold">
-            Privacy & <span className="text-gradient-gold">Security</span>
+            Secure <span className="text-gradient-gold">Cloud Sync</span>
           </h2>
         </div>
 

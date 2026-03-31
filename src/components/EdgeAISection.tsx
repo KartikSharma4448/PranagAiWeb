@@ -1,11 +1,11 @@
-import { WifiOff, Cpu, MapPin, Stethoscope } from "lucide-react";
+import { WifiOff, Cpu, MapPin, Smartphone } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const features = [
-  { icon: WifiOff, title: "Works Without Internet", desc: "Full diagnostic capabilities with zero connectivity requirement." },
-  { icon: Cpu, title: "Edge-Optimized AI Models", desc: "Lightweight models designed to run efficiently on any smartphone." },
-  { icon: MapPin, title: "100% Remote Area Coverage", desc: "Every village, every farm — complete functionality everywhere." },
-  { icon: Stethoscope, title: "Closing the Vet Gap", desc: "Scalable AI intelligence that bridges the veterinarian shortage." },
+  { icon: WifiOff, title: "Works Without Internet", desc: "On-device workflows support usage in rural and low-network areas." },
+  { icon: Cpu, title: "Edge-Optimized Models", desc: "Lightweight AI models designed to run efficiently on any smartphone." },
+  { icon: MapPin, title: "Rural Area Coverage", desc: "Built to work well for farmers in low-resource and low-connectivity settings." },
+  { icon: Smartphone, title: "Hardware-Light Farming", desc: "Reduce dependency on extra devices by using smartphone-based AI workflows." },
 ];
 
 const EdgeAISection = () => {
@@ -16,7 +16,7 @@ const EdgeAISection = () => {
         <div className="text-center mb-14">
           <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Offline-First</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold">
-            Edge AI <span className="text-gradient-gold">Technology</span>
+            Offline-Ready <span className="text-gradient-gold">AI Processing</span>
           </h2>
           <div className="inline-flex items-center gap-2 mt-4 px-4 py-1.5 rounded-full gradient-primary text-primary-foreground text-xs font-semibold">
             <WifiOff size={14} /> Offline Ready
